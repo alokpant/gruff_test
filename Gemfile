@@ -48,6 +48,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'json'
+
 gem 'gruff'
 
 # Use ActiveModel has_secure_password

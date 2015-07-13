@@ -2,16 +2,14 @@ RailStrap::Application.routes.draw do
 
 
 
-  devise_for :users, :controllers => { :registrations => :registrations }
-  devise_for :admins
+  # devise_for :users, :controllers => { :registrations => :registrations }
+  # devise_for :admins
 
-  get '/token' => 'home#token', as: :token
+  get '/graph' => 'graph#index', as: :index
 
   resources :home, only: :index
   resources :admins
 
-  root to: "dashboard#index"
-
-
+  root to: "graph#index"
 
 end
